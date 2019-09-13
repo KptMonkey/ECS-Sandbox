@@ -1,5 +1,8 @@
 #include <iostream>
+#include "entity_manager.hpp"
 
 int main() {
-	std::cout << "Hello World!" << '\n';
+    EntityManager em;
+    auto e = em.createEntity();
+    em.destroyEntity(e);
 }

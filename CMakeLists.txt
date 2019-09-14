@@ -8,6 +8,8 @@ set(SOURCE_FILES entity.hpp
                  component_array.hpp
                  component_manager.hpp
                  signature.hpp
+                 system.hpp
+                 system_manager.hpp
                  Components/transform.hpp)
 
 add_executable(ECS-Sandbox main.cpp ${SOURCE_FILES})

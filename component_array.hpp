@@ -29,13 +29,13 @@ public:
         mEntityToIndexMap[entityOfLastElement] = indexOfRemovedEntity;
         mIndexToEntityMap[indexOfRemovedEntity] = entityOfLastElement;
 
-        mEntityToIndexMap.erase(entity);
+        mEntityToIndexMap.erase(e);
         mIndexToEntityMap.erase(indexOfLastElement);
 
         --mSize;
     }
 
-    T& GetData(Entity entity)
+    T& getData(Entity entity)
     {
         assert(mEntityToIndexMap.find(entity) != mEntityToIndexMap.end() && "Retrieving non-existent component.");
 
@@ -43,12 +43,12 @@ public:
         return mComponentArray[mEntityToIndexMap[entity]];
     }
 
-    void EntityDestroyed(Entity entity) override
+    void entityDestroyed(Entity e) override
     {
-        if (mEntityToIndexMap.find(entity) != mEntityToIndexMap.end())
+        if (mEntityToIndexMap.find(e) != mEntityToIndexMap.end())
         {
             // Remove the entity's component if it existed
-            RemoveData(entity);
+            removeData(e);
         }
     }
 

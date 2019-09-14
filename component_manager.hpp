@@ -39,7 +39,7 @@ public:
     template<typename T>
     T& getComponent(Entity e) {
         auto compArray = getComponentArray<T>();
-        compArray->getData(e);
+        return compArray->getData(e);
     }
 
     void

@@ -46,23 +46,23 @@ class ManagerManager {
         }
 
         template<typename T>
-        T& GetComponent(Entity e) {
+        T& getComponent(Entity e) {
             return mComponentManager->getComponent<T>(e);
         }
 
         template<typename T>
-        ComponentType GetComponentType() {
+        ComponentType getComponentType() {
             return mComponentManager->getComponentType<T>();
         }
 
 
         template<typename T>
-        std::shared_ptr<T> RegisterSystem() {
+        std::shared_ptr<T> registerSystem() {
             return mSystemManager->registerSystem<T>();
         }
 
         template<typename T>
-        void SetSystemSignature(Signature signature) {
+        void setSystemSignature(Signature signature) {
             mSystemManager->setSignature<T>(signature);
         }
 

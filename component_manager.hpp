@@ -1,4 +1,5 @@
 #pragma once
+
 #include "component.hpp"
 #include "component_array.hpp"
 #include "entity.hpp"

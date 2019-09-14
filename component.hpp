@@ -1,3 +1,5 @@
+#pragma once
+
 #include <bitset>
 
 using ComponentType = int;
